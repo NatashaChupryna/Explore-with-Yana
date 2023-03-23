@@ -1,0 +1,356 @@
+// Basic
+body {
+  font-family: "Merriweather", serif;
+  background-color: #dfdbd8;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #212121;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+
+// .visually-hidden {
+//     position: absolute;
+//     width: 1px;
+//     height: 1px;
+//     margin: -1px;
+//     border: 0;
+//     padding: 0;
+//     white-space: nowrap;
+//     clip-path: inset(100%);
+//     clip: rect(0 0 0 0);
+//     overflow: hidden;
+// }
+
+//  < !-------------***| Header |***------------>
+
+.header {
+  width: 100%;
+  padding: 30px 0;
+}
+
+//  < !-------------***| Hero |***------------>
+.hero {
+  display: block;
+  background-color: rgba(47, 48, 58, 0.4);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  padding-left: 0;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../image/background/Img@1x_M.jpg);
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/background.webp);
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-right: 0;
+    padding-bottom: 200px;
+    padding-left: 0;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/background.webp);
+    padding-top: 400px;
+    padding-bottom: 400px;
+  }
+}
+
+.hero__title {
+  color: white;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-shadow: 2px 0px 2px #080302;
+
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+    line-height: 1.36;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 60px;
+    line-height: 1.36;
+  }
+}
+
+//  < !-------------***| About |***------------>
+.about {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.about_container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 0 30px;
+  }
+}
+.about_title {
+  text-align: center;
+  font-size: 20x;
+  @media screen and (min-width: 768px) {
+    width: 600px;
+    font-size: 26px;
+  }
+}
+
+.about_text {
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    width: 600px;
+  }
+}
+
+.about_img {
+  width: 300px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/about.jpeg);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    width: 500px;
+    height: 600px;
+  }
+}
+
+//  < !-------------***| Price |***------------>
+.price_container {
+  position: relative;
+  background-image: url(../images/price.webp);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  width: 100%;
+  height: 400px;
+  margin-left: 20px;
+
+  @media screen and (min-width: 768px) {
+    height: 600px;
+    background-size: 40%;
+  }
+}
+.price_wrapper {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.9)
+  );
+  width: 300px;
+  padding: 15px;
+  border-radius: 10px;
+
+  @media screen and (min-width: 768px) {
+    width: 650px;
+    height: 400px;
+  }
+}
+
+.price_list {
+  padding: 0;
+}
+
+.price_list_title {
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.price_list_item {
+  padding: 5px 0;
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #212121;
+    margin-top: 5px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 15px 0;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+}
+//  < !-------------***| Feedback |***------------>
+.feedback_container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.feedback_title {
+}
+
+.feedback_list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.feedback_item {
+  width: 150px;
+  height: 100%;
+  padding: 15px;
+  margin-right: 8px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.9)
+  );
+  border-radius: 10px;
+}
+
+//  < !-------------***| Footer |***------------>
+.footer-container {
+  display: flex;
+  margin-left: 0;
+  padding-bottom: 25px;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+  }
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  }
+}
+.footer-title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footer_social_list {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+.footer-contact-link {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  margin-bottom: 9px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer-social-link {
+  width: 44px;
+  height: 44px;
+  color: #afb1b8;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: white;
+    color: black;
+  }
+}
+
+.social-link-svg {
+  fill: black;
+
+  .footer-social-link:hover,
+  .footer-social-link:focus & {
+    fill: currentColor;
+  }
+}
