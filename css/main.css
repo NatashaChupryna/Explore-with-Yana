@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Butler";
+  src: url("Butler.woff2") format("woff2"), url("Butler.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "Merriweather", serif;
   background-color: #dfdbd8;
@@ -81,8 +87,8 @@ img {
 }
 
 .hero_upper-title {
+  font-family: "Butler";
   color: white;
-  font-weight: 600;
   font-size: 18px;
   text-align: center;
   letter-spacing: 0.06em;
@@ -97,6 +103,7 @@ img {
 }
 
 .hero__title {
+  font-family: "Butler";
   color: white;
   font-weight: 900;
   font-size: 28px;
@@ -149,6 +156,7 @@ img {
   padding: 0;
   color: rgba(255, 255, 255, 0.3);
   font-size: 60px;
+  font-family: "Butler";
 }
 @media screen and (min-width: 768px) {
   .about_upper-title {
@@ -165,9 +173,12 @@ img {
 }
 
 .about_title {
+  font-family: Butler;
+  font-weight: 100;
   text-align: center;
   font-size: 20x;
   line-height: 1.25;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
   .about_title {
@@ -180,6 +191,7 @@ img {
   text-align: center;
   margin-bottom: 30px;
   line-height: 1.25;
+  font-family: "Butler";
 }
 @media screen and (min-width: 768px) {
   .about_text {
@@ -231,7 +243,7 @@ img {
 }
 
 .price_img {
-  background-image: url(../images/price.webp);
+  background-image: url(../images/price.jpeg);
   background-repeat: no-repeat;
   background-size: 60%;
   width: 100%;
@@ -254,7 +266,7 @@ img {
 .price_wrapper {
   position: absolute;
   top: 30%;
-  right: 6%;
+  right: 7%;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.9)));
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
   width: 270px;
@@ -386,6 +398,7 @@ img {
 }
 
 .footer-title {
+  font-family: "Butler";
   margin: 0;
   margin-bottom: 12px;
   font-weight: 600;
