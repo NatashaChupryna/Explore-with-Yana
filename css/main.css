@@ -243,7 +243,7 @@ img {
 
 .price {
   padding-top: 30px;
-  padding-bottom: 420px;
+  padding-bottom: 440px;
 }
 @media screen and (min-width: 768px) {
   .price {
@@ -343,6 +343,7 @@ img {
 
 .price_list_text {
   font-size: 12px;
+  font-weight: 100;
 }
 @media screen and (min-width: 768px) {
   .price_list_text {
