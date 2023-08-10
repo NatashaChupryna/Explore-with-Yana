@@ -1,5 +1,5 @@
 body {
-  font-family: "Nanum Myeongjo", serif;
+  font-family: "Playfair Display", serif;
   background-color: hsl(40, 14.29%, 95.88%);
 }
 
@@ -13,7 +13,6 @@ p {
 }
 
 ul {
-  list-style: none;
   margin: 0;
 }
 
@@ -50,11 +49,6 @@ img {
   }
 }
 
-.header {
-  width: 100%;
-  padding: 30px 0;
-}
-
 .hero {
   display: block;
   background-color: rgba(47, 48, 58, 0.4);
@@ -66,13 +60,13 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   padding-left: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background.webp);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.webp);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.jpg);
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background.webp);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.webp);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.jpg);
     padding-top: 200px;
     padding-bottom: 200px;
   }
@@ -83,20 +77,20 @@ img {
     padding-right: 0;
     padding-bottom: 200px;
     padding-left: 0;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background.webp);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.webp);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.jpg);
     padding-top: 350px;
     padding-bottom: 350px;
   }
 }
 
 .hero_upper-title {
-  color: white;
   font-size: 18px;
   text-align: center;
   letter-spacing: 0.06em;
   margin-top: 0;
   margin-bottom: 30px;
+  color: white;
   text-shadow: 2px 2px 1px #333333, 5px 4px 0px rgba(0, 0, 0, 0.15);
 }
 @media screen and (min-width: 768px) {
@@ -167,7 +161,7 @@ img {
   margin: 0;
   padding: 0;
   color: #ffffff;
-  text-shadow: 2px 2px 0px #333333, 5px 4px 0px rgba(0, 0, 0, 0.15);
+  text-shadow: 2px 2px 0px #b9b7b7, 5px 4px 0px #c7c7c7;
   font-size: 60px;
   font-family: "Butler";
 }
@@ -180,8 +174,9 @@ img {
 @media screen and (min-width: 1200px) {
   .about_upper-title {
     width: 700px;
-    font-size: 125px;
+    font-size: 90px;
     padding-left: 0;
+    padding-left: 100px;
   }
 }
 
@@ -208,7 +203,7 @@ img {
 @media screen and (min-width: 768px) {
   .about_text {
     width: 700px;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 0;
   }
 }
@@ -243,7 +238,7 @@ img {
 
 .price {
   padding-top: 30px;
-  padding-bottom: 440px;
+  padding-bottom: 620px;
 }
 @media screen and (min-width: 768px) {
   .price {
@@ -295,7 +290,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .price_wrapper {
-    top: 25%;
+    top: 15%;
     width: 450px;
     right: 0%;
     padding: 15px;
@@ -313,9 +308,12 @@ img {
 }
 
 .price_list_title {
+  color: white;
+  text-shadow: 2px 2px 1px #333333, 5px 4px 0px rgba(0, 0, 0, 0.15);
   line-height: 1.25;
   margin: 0;
   margin-bottom: 10px;
+  text-align: justify;
 }
 @media screen and (min-width: 768px) {
   .price_list_title {
@@ -329,21 +327,34 @@ img {
 }
 
 .price_list_item {
-  padding: 5px 0;
-  padding-left: 25px;
+  padding: 15px 0px;
+  padding-left: 10px;
   font-weight: bold;
+  list-style: none;
+}
+.price_list_item:last-child {
+  padding-bottom: 0;
 }
 @media screen and (min-width: 768px) {
   .price_list_item {
-    padding: 15px 0;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     font-size: 20px;
   }
+}
+
+.price_list_item__title {
+  padding-bottom: 10px;
+}
+
+.price_list__lower_title {
+  font-size: 14px;
+  text-align: justify;
 }
 
 .price_list_text {
   font-size: 12px;
   font-weight: 100;
+  padding-bottom: 6px;
 }
 @media screen and (min-width: 768px) {
   .price_list_text {
@@ -363,6 +374,7 @@ img {
 .feedback_title {
   text-align: center;
   margin-bottom: 24px;
+  font-size: 23px;
 }
 @media screen and (min-width: 768px) {
   .feedback_title {
@@ -371,6 +383,7 @@ img {
 }
 
 .feedback_list {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,7 +406,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .feedback_item {
-    font-size: 20px;
+    font-size: 18px;
     width: 250px;
     height: 100%;
     padding: 30px;
@@ -405,7 +418,7 @@ img {
 }
 
 .info {
-  padding-bottom: 260px;
+  padding-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .info {
@@ -414,42 +427,39 @@ img {
 }
 
 .info_container {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .info_title {
-  position: absolute;
-  top: 93%;
-  font-size: 36px;
+  font-size: 34px;
   z-index: 999;
   color: #ffffff;
-  text-shadow: 2px 2px 1px #333333, 5px 4px 0px rgba(0, 0, 0, 0.15);
+  text-shadow: 2px 2px 0px #b9b7b7, 5px 4px 0px #c7c7c7;
 }
 @media screen and (min-width: 768px) {
   .info_title {
     font-size: 50px;
-    top: 48%;
-    left: 40%;
   }
 }
 @media screen and (min-width: 1200px) {
   .info_title {
     font-size: 68px;
-    top: 15%;
-    left: 1%;
   }
 }
 
 .info_wrapper {
-  position: absolute;
-  top: 100%;
-  left: 12%;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.9)));
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
   width: 270px;
@@ -460,40 +470,15 @@ img {
 }
 @media screen and (min-width: 768px) {
   .info_wrapper {
-    top: 55%;
-    left: 40%;
     width: 450px;
     padding: 20px;
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 1200px) {
   .info_wrapper {
     width: 550px;
     padding: 50px;
-    top: 20%;
-    left: 0%;
-  }
-}
-
-.info_img {
-  background-image: url(../images/info.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 100%;
-  height: 400px;
-  margin-left: 10px;
-}
-@media screen and (min-width: 768px) {
-  .info_img {
-    height: 600px;
-    background-size: 60%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .info_img {
-    width: 800px;
-    margin-right: -250px;
   }
 }
 
@@ -506,8 +491,14 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 30px;
+  gap: 10px;
 }
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    gap: 30px;
+  }
+}
+
 .footer-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -523,6 +514,7 @@ img {
   margin: 0;
   margin-bottom: 12px;
   font-weight: 600;
+  font-size: 14px;
 }
 @media screen and (min-width: 768px) {
   .footer-title {
@@ -531,6 +523,7 @@ img {
 }
 
 .footer_social_list {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -561,7 +554,7 @@ img {
   color: black;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: none;
@@ -624,4 +617,10 @@ img {
 }
 .social-link-svg .footer-social-link:hover, .footer-social-link:focus .social-link-svg {
   fill: white;
+}
+
+.author {
+  font-size: 12px;
+  color: #858383;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
