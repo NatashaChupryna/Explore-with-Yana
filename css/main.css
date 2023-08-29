@@ -79,7 +79,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    padding-top: 450px;
+    padding-top: 350px;
     padding-right: 0;
     padding-left: 0;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background.jpg);
@@ -194,7 +194,7 @@ img {
 .about_text {
   text-align: center;
   margin-bottom: 30px;
-  line-height: 1.6;
+  line-height: 1.74;
   letter-spacing: 1.6px;
   text-align: justify;
   font-weight: 100;
@@ -325,7 +325,6 @@ img {
 @media screen and (min-width: 1200px) {
   .price_wrapper {
     width: 580px;
-    padding-top: 70px;
   }
 }
 
@@ -338,7 +337,7 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 100px;
+    gap: 90px;
   }
 }
 
@@ -376,6 +375,11 @@ img {
 
 .price_accent {
   color: #689c45;
+  font-weight: 100;
+}
+
+.accent2 {
+  font-size: 24px;
 }
 
 .price_list_item {
@@ -440,6 +444,11 @@ img {
     font-size: 20px;
     line-height: 1.34;
     letter-spacing: 1.6px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .price_list_text {
+    line-height: 1.7;
   }
 }
 
@@ -514,6 +523,29 @@ img {
   }
 }
 
+.travel-pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.picture {
+  width: 240px;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .feedback {
   padding-bottom: 50px;
 }
@@ -581,8 +613,8 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .user_img {
-    width: 220px;
-    margin-left: 70px;
+    width: 150px;
+    margin-left: 110px;
   }
 }
 
@@ -729,17 +761,15 @@ img {
 }
 
 .author {
-  font-size: 14px;
+  font-size: 12px;
   color: #111111;
   text-align: center;
   margin-bottom: 20px;
   margin-top: 20px;
   line-height: 1.3;
-  font-size: 14px;
 }
 @media screen and (min-width: 1200px) {
   .author {
-    font-size: 20px;
     text-align: center;
     margin-bottom: 35px;
     margin-top: 35px;
