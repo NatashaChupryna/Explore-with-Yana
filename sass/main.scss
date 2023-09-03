@@ -162,8 +162,8 @@ img {
   letter-spacing: 1.3px;
   padding-left: 26%;
   font-weight: 600;
-  margin-bottom: 14px;
-
+  margin-bottom: 16px;
+  margin-top: -10px;
   @media screen and (min-width: 768px) {
     font-size: 44px;
     padding-left: 36%;
@@ -179,7 +179,7 @@ img {
 .about_text {
   text-align: center;
   margin-bottom: 30px;
-  line-height: 1.55;
+  line-height: 1.62;
   letter-spacing: 1.6px;
   text-align: justify;
   font-weight: 100;
@@ -209,7 +209,6 @@ img {
 
   @media screen and (min-width: 1200px) {
     width: 580px;
-    height: 100%;
   }
 }
 
@@ -284,7 +283,7 @@ img {
   @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: column;
-    gap: 98px;
+    gap: 86px;
     margin-top: -10px;
   }
 }
