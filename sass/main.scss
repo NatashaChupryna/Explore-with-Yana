@@ -162,8 +162,8 @@ img {
   letter-spacing: 1.3px;
   padding-left: 26%;
   font-weight: 600;
-  margin-bottom: 16px;
-  margin-top: -10px;
+  margin-bottom: 15px;
+  margin-top: -5px;
   @media screen and (min-width: 768px) {
     font-size: 44px;
     padding-left: 36%;
@@ -180,12 +180,13 @@ img {
   text-align: center;
   margin-bottom: 30px;
   line-height: 1.62;
-  letter-spacing: 1.6px;
+  letter-spacing: 1px;
   text-align: justify;
   font-weight: 100;
   @media screen and (min-width: 768px) {
     font-size: 20px;
     margin-bottom: 0;
+    letter-spacing: 1.6px;
   }
   @media screen and (min-width: 1200px) {
     padding-right: 100px;
