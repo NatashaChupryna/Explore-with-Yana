@@ -192,7 +192,7 @@ img {
   .about_text {
     font-size: 20px;
     margin-bottom: 0;
-    letter-spacing: 1.62px;
+    letter-spacing: 1.5px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -200,6 +200,10 @@ img {
     padding-right: 100px;
     padding-left: 12px;
   }
+}
+
+.number {
+  font-family: -apple-system-footnote;
 }
 
 @media screen and (min-width: 300px) and (max-width: 700px) {
