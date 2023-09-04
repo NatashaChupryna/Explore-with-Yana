@@ -169,7 +169,6 @@ img {
   letter-spacing: 1.3px;
   padding-left: 26%;
   font-weight: 600;
-  margin-bottom: 15px;
   margin-top: -5px;
 }
 @media screen and (min-width: 768px) {
@@ -182,8 +181,7 @@ img {
   .about_title {
     width: 700px;
     font-size: 56px;
-    padding-left: 0;
-    padding-left: 220px;
+    padding-left: 28%;
     font-weight: 600;
   }
 }
@@ -200,7 +198,7 @@ img {
   .about_text {
     font-size: 20px;
     margin-bottom: 0;
-    letter-spacing: 1.6px;
+    letter-spacing: 1.62px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -461,9 +459,13 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .price_list_text {
-    line-height: 1.55;
+    line-height: 1.58;
     padding-left: 12px;
   }
+}
+
+.no_padding {
+  padding: 0;
 }
 
 .info {
