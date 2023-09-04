@@ -131,7 +131,7 @@ img {
 
 //  < !-------------***| About |***------------>
 .about {
-  padding-top: 10px;
+  padding-top: 30px;
   padding-bottom: 30px;
   @media screen and (min-width: 768px) {
     padding-top: 40px;
@@ -156,6 +156,7 @@ img {
   padding-left: 26%;
   font-weight: 600;
   margin-top: -5px;
+  margin-bottom: 6px;
   @media screen and (min-width: 768px) {
     font-size: 44px;
     padding-left: 36%;
@@ -165,6 +166,7 @@ img {
     font-size: 56px;
     padding-left: 28%;
     font-weight: 600;
+    margin-bottom: 0;
   }
 }
 .about_text {
