@@ -39,11 +39,6 @@ img {
   margin-left: auto;
   padding: 0 15px;
 }
-@media screen and (min-width: 480px) {
-  .container {
-    max-width: 480px;
-  }
-}
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -77,6 +72,7 @@ img {
 @media screen and (min-width: 1200px) {
   .hero {
     padding: 420px 0;
+    padding-top: 300px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.jpg);
   }
@@ -164,6 +160,11 @@ img {
   font-weight: 600;
   margin-top: -5px;
   margin-bottom: 6px;
+}
+@media screen and (min-width: 500px) {
+  .about_title {
+    padding-left: 35%;
+  }
 }
 @media screen and (min-width: 768px) {
   .about_title {
@@ -325,7 +326,7 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 86px;
+    gap: 80px;
     margin-top: -10px;
   }
 }
@@ -611,12 +612,11 @@ img {
 
 .user_img {
   width: 70px;
-  margin-left: 18px;
+  margin-left: 25%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .user_img {
     width: 120px;
-    margin-left: 54px;
   }
 }
 @media screen and (min-width: 1200px) {
