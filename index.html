@@ -36,6 +36,7 @@
       src="https://www.facebook.com/tr?id=1148407462801411&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -326,6 +327,7 @@
         </div>
       </div>
     </footer>
+
     <p class="author">
       Developed by: <br />
       <a
@@ -335,5 +337,41 @@
         >Nataliia Chupryna</a
       >
     </p>
+
+    <!-- Banner  -->
+    <div id="overlay">
+      <div class="popup">
+        <p class="message-text">
+          Ready to elevate your travel experiences? Follow me on Instagram and
+          claim your FREE trip consultation today!
+        </p>
+
+        <a
+          href="https://www.instagram.com/yanariabtsun/?igshid=YmMyMTA2M2Y%3D"
+          aria-label="Socialmedia"
+          class="banner-social-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+          <svg class="icon-hand" width="18" height="24">
+            <use href="./images/icons.svg#hand"></use>
+          </svg>
+        </a>
+
+        <button
+          class="close"
+          title="Close"
+          onclick="document.getElementById('overlay').style.display='none';"
+        >
+          <svg width="18" height="18">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- JS script -->
+    <script src="./index.js"></script>
   </body>
 </html>
