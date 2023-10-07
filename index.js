@@ -3,4 +3,4 @@ function banner() {
   overlay.style.display = "block";
 }
 
-setTimeout(banner, 2000);
+setTimeout(banner, 15000);
