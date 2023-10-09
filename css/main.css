@@ -869,6 +869,7 @@ img {
 
 .close {
   color: #000000;
+  font-family: revert;
   top: 10px;
   right: 10px;
   width: 24px;
