@@ -65,16 +65,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (error === 0) {
       form.classList.add("_sending");
-      if (form.classList.contains("sending")) {
+      if (form.classList.contains("_sending")) {
         alert("Thanks. I`ll get in contact with you");
       }
-      let response = await fetch("sendmail.php", {
-        method: "POST",
-        body: formData,
-      });
-      if (response.ok) {
-        let result = await response.json();
-        form.reset();
+
+      try {
+        let response = await fetch("sendMail.php", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          let result = await response.json();
+          form.reset();
+          console.log("форма відправилась");
+        } else {
+          console.error("Помилка відправки форми:", response.statusText);
+        }
+      } catch (error) {
+        console.error("Помилка відправки форми:", error.message);
       }
     } else {
       alert("Fill in required fields");
@@ -93,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (emailTest(input)) {
           formAddError(input);
           error++;
+          console.log("помилка в пошті");
         }
       }
 
@@ -100,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formAddError(input);
         error++;
       }
+      console.log("помилка валідації");
     }
     return error;
   }
