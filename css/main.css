@@ -50,6 +50,40 @@ img {
   }
 }
 
+header {
+  font-family: Bell;
+  background-color: rgb(255, 255, 255);
+  color: #111111;
+}
+
+.navigation {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+  line-height: 1.62;
+  font-weight: 100;
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    font-size: 20px;
+    gap: 50px;
+    letter-spacing: 1.5px;
+  }
+}
+
+.nav_item:hover, .nav_item:focus {
+  color: #689c45;
+}
+
 .hero {
   display: block;
   background-color: rgba(47, 48, 58, 0.4);
@@ -950,8 +984,8 @@ img {
 .form_button {
   font-family: inherit;
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 14px;
   line-height: 1.87;
   display: inline-block;
   text-align: center;
@@ -959,12 +993,21 @@ img {
   color: #ffffff;
   background-color: #689c45;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 25px;
   border-color: transparent;
-  min-width: 200px;
-  padding: 10px 32px;
+  min-width: 100px;
+  padding: 10px 20px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .form_button {
+    font-size: 16px;
+    min-width: 200px;
+    padding: 10px 32px;
+    font-size: 18px;
+    font-weight: 700;
+  }
 }
 
 .backdrop {
@@ -1117,7 +1160,7 @@ img {
   border-radius: 4px;
   height: 40px;
   width: 100%;
-  padding-left: 43px;
+  padding-left: 10px;
   margin-bottom: 10px;
   outline: none;
   font-size: 12px;
@@ -1127,6 +1170,10 @@ img {
 }
 .modal-input:focus-within {
   border-color: #689c45;
+}
+
+._error {
+  border-color: red;
 }
 
 .modal-textarea {
@@ -1142,7 +1189,7 @@ img {
   line-height: 1.16;
   letter-spacing: 0.01em;
   outline: none;
-  color: var(--secondary-text-color);
+  color: black;
 }
 .modal-textarea:-moz-placeholder-shown {
   color: rgba(117, 117, 117, 0.5);
@@ -1162,7 +1209,7 @@ img {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
+  color: black;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
