@@ -33,6 +33,9 @@ if (trim(!empty($_POST['numder of travellers']))) {
 if (trim(!empty($_POST['destination']))) {
     $body .= '<p><strong> destination : ' . $_POST['destination'] . '</strong></p>';
 }
+if (trim(!empty($_POST['message']))) {
+    $body .= '<p><strong> message : ' . $_POST['message'] . '</strong></p>';
+}
 
 $mail->body = $body;
 

@@ -105,8 +105,8 @@ header {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    padding: 420px 0;
-    padding-top: 300px;
+    padding: 425px 0;
+    padding-top: 325px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.jpg);
   }
