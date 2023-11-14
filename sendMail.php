@@ -110,8 +110,6 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'natkamonte1992'; // Логин на почте
-    $mail->Password   = 'password'; // Пароль на почте
     $mail->SMTPSecure = ‘ssl’;
     $mail->Port       = 465;
     $mail->setFrom('PL@mail.com', 'new client'); // Адрес самой почты и имя отправителя
