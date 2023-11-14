@@ -105,14 +105,14 @@ try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    //$mail->SMTPDebug = 2;
+    $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
     $mail->Username   = 'natkamonte1992'; // Логин на почте
     $mail->Password   = 'password'; // Пароль на почте
-    $mail->SMTPSecure = 'ssl';
+    $mail->SMTPSecure = ‘ssl’;
     $mail->Port       = 465;
     $mail->setFrom('PL@mail.com', 'new client'); // Адрес самой почты и имя отправителя
     $mail->addAddress('natkamonte1992@gmail.com');  
