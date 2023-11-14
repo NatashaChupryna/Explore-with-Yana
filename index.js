@@ -36,23 +36,6 @@ function toggleModal() {
   refs.body.classList.toggle("no-scroll");
 }
 
-// Mobile menu
-// (() => {
-//   const menuOpenBtn = document.querySelector("[data-menu-open]");
-//   const menuCloseBtn = document.querySelector("[data-menu-close]");
-
-//   const mobileMenu = document.querySelector("[data-menu]");
-//   // const body = document.querySelector('body');
-
-//   menuOpenBtn.addEventListener("click", openModal);
-//   menuCloseBtn.addEventListener("click", openModal);
-
-//   function openModal() {
-//     mobileMenu.classList.toggle("is-open");
-//     body.classList.toggle("no-scroll");
-//   }
-// })();
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementsByClassName("modal-form")[0];
   form.addEventListener("submit", formSend);
@@ -62,15 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let error = formValidate(form);
 
     let formData = new FormData(form);
-
+    console.log("formData", formData);
     if (error === 0) {
-      form.classList.add("_sending");
-      if (form.classList.contains("_sending")) {
-        alert("Thanks. I`ll get in contact with you");
-      }
-
       try {
-        let response = await fetch("sendMail.php", {
+        let response = await fetch("http://127.0.0.1:5501/sendMail.php", {
           method: "POST",
           body: formData,
         });
@@ -78,10 +56,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (response.ok) {
           let result = await response.json();
           form.reset();
+
           console.log("форма відправилась");
         } else {
           console.error("Помилка відправки форми:", response.statusText);
         }
+        alert("Thanks. I`ll get in contact with you");
       } catch (error) {
         console.error("Помилка відправки форми:", error.message);
       }
@@ -92,11 +72,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function formValidate(form) {
     let error = 0;
-    let formReq = form.querySelectorAll("._req");
+    let formReq = form.getElementsByClassName("_req");
+    console.log("помилка в _req");
+    console.log("formReq", formReq);
 
     for (let i = 0; i < formReq.length; i++) {
       const input = formReq[i];
       formRemoveError(input);
+      console.log("formReq[i]", formReq[i]);
 
       if (input.classList.contains("_email")) {
         if (emailTest(input)) {
@@ -109,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (input.value === "") {
         formAddError(input);
         error++;
+        console.log("помилка в пустому інпуті");
       }
       console.log("помилка валідації");
     }

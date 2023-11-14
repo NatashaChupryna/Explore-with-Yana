@@ -386,42 +386,38 @@
         </button>
 
         <form
-          method="post"
-          action="./sendMail.php"
-          name="modal"
+          method="POST"
+          action="sendMail.php"
+          name="form"
           class="modal-form"
           id="form"
+          onsubmit="event, 'sendMail.php'"
         >
           <b class="modal-title">Get in touch</b>
           <div class="register-form">
             <label class="modal-label"
               ><span class="modal-span">Name</span>
               <div class="modal-svg-holder">
-                <input
-                  type="text"
-                  name="user name"
-                  class="modal-input _req"
-                  placeholder=" "
-                />
+                <input type="text" name="name" class="modal-input _req" />
               </div>
             </label>
 
             <label class="modal-label"
               ><span class="modal-span">Phone number</span>
-              <input type="tel" class="modal-input _req" name="user phone" />
+              <input type="tel" class="modal-input _req" name="phone" />
             </label>
 
             <label class="modal-label"
               ><span class="modal-span">Email</span>
               <input
-                type="mail"
-                name="user mail"
+                type="email"
+                name="email"
                 class="modal-input _req _email"
               />
             </label>
 
             <label class="modal-label"
-              ><span class="modal-span">Number of travellers</span>
+              ><span class="modal-span">Number of travelers</span>
               <input name="quantity" class="modal-input" />
             </label>
 
@@ -433,7 +429,7 @@
             <label class="modal-label"
               ><span class="modal-span">Message</span>
               <textarea
-                name="user comment"
+                name="message"
                 placeholder="Add your message"
                 class="modal-textarea"
               ></textarea>
@@ -443,6 +439,7 @@
             Privacy is valued, and your personal information will not be
             shared with third parties.👌
           </p>
+
           <button type="submit" name="submit" class="modal-btn">Send</button>
         </form>
       </div>
