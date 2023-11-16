@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (response.ok) {
           let result = await response.json();
+          console.log("form", form);
           form.reset();
 
           console.log("форма відправилась");
@@ -86,6 +87,15 @@ document.addEventListener("DOMContentLoaded", function () {
           formAddError(input);
           error++;
           console.log("помилка в пошті");
+          alert("Fill in the email correctly");
+        }
+      }
+      if (input.classList.contains("_tel")) {
+        if (phoneTest(input)) {
+          formAddError(input);
+          error++;
+          console.log("помилка в телефоні");
+          alert("Fill in the phone number correctly");
         }
       }
 
@@ -111,6 +121,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function emailTest(input) {
     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+  }
+
+  function phoneTest(input) {
+    return !/(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?/.test(
+      input.value
+    );
   }
 });
 

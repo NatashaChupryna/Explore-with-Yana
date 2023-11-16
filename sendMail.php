@@ -81,14 +81,14 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-// Переменные, которые отправляет пользователь
+
 $name = $_POST['name'];
 $email = $_POST['email'];
 $quantity = $_POST['quantity'];
 $destination = $_POST['destination'];
 $message = $_POST['message'];
 
-// Формирование самого письма
+// Формування листа
 $title = "Mail from Plan Voyage";
 $body = "
 
@@ -108,20 +108,20 @@ try {
     $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
-    // Настройки вашей почты
-    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
+    // Настройки пошти
+    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера пошти
     $mail->SMTPSecure = ‘ssl’;
     $mail->Port       = 465;
-    $mail->setFrom('PL@mail.com', 'new client'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('PL@mail.com', 'new client'); // Адрес пошти
     $mail->addAddress('natkamonte1992@gmail.com');  
 
 
-// Отправка сообщения
+// Відправка
 $mail->isHTML(true);
 $mail->Subject = $title;
 $mail->Body = $body;    
 
-// Проверяем отравленность сообщения
+// Перевірка
 if ($mail->send()) {$result = "success";} 
 else {$result = "error";}
 
@@ -130,5 +130,4 @@ else {$result = "error";}
     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
-// Отображение результата
 echo json_encode(["result" => $result, "status" => $status]);
