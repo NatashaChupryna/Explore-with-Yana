@@ -1,10 +1,4 @@
 "use strict";
-// Banner script
-// function banner() {
-//   const overlay = document.getElementById("overlay");
-//   overlay.style.display = "block";
-// }
-// setTimeout(banner, 15000);
 
 function banner() {
   const overlay = document.getElementById("overlay");

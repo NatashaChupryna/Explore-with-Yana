@@ -109,7 +109,7 @@ try {
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки пошти
-    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера пошти
+    $mail->Host       = 'smtp.gmail.com'; 
     $mail->SMTPSecure = ‘ssl’;
     $mail->Port       = 465;
     $mail->setFrom('PL@mail.com', 'new client'); // Адрес пошти
