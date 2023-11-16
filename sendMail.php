@@ -113,7 +113,7 @@ try {
     $mail->SMTPSecure = ‘ssl’;
     $mail->Port       = 465;
     $mail->setFrom('PL@mail.com', 'new client'); // Адрес пошти
-    $mail->addAddress('natkamonte1992@gmail.com');  
+    $mail->addAddress('yanatraveladvisor@gmail.com');  
 
 
 // Відправка
