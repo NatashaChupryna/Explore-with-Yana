@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("formData", formData);
     if (error === 0) {
       try {
-        let response = await fetch("http://127.0.0.1:5501/sendMail.php", {
+        let response = await fetch("https://planvoyage.fr/sendMail.php", {
           method: "POST",
           body: formData,
         });
