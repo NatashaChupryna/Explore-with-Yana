@@ -91,7 +91,6 @@ $message = $_POST['message'];
 // Формування листа
 $title = "Mail from Plan Voyage";
 $body = "
-
 <b>name:</b> $name<br>
 <b>email:</b> $email<br>
 <b>Number of travelers:</b> $quantity<br>
@@ -110,9 +109,9 @@ try {
 
     // Настройки пошти
     $mail->Host       = 'smtp.gmail.com'; 
-    $mail->SMTPSecure = ‘ssl’;
-    $mail->Port       = 465;
-    $mail->setFrom('PL@mail.com', 'new client'); // Адрес пошти
+    $mail->SMTPSecure = ‘TLS’;
+    $mail->Port       = 587;
+    $mail->setFrom('PlanVoyageNewMail@mail.com', 'new client'); // Адрес пошти
     $mail->addAddress('yanatraveladvisor@gmail.com');  
 
 
@@ -127,7 +126,7 @@ else {$result = "error";}
 
 } catch (Exception $e) {
     $result = "error";
-    $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
+    $status = "Причина помилки: {$mail->ErrorInfo}";
 }
 
 echo json_encode(["result" => $result, "status" => $status]);

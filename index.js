@@ -27,11 +27,12 @@ refs.closeModalBtn.addEventListener("click", toggleModal);
 
 function toggleModal() {
   refs.modal.classList.toggle("is-hidden");
-  refs.body.classList.toggle("no-scroll");
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+// перший варіант
+function submit() {
   const form = document.getElementsByClassName("modal-form")[0];
+
   form.addEventListener("submit", formSend);
 
   async function formSend(e) {
@@ -52,13 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log("form", form);
           form.reset();
 
-          console.log("форма відправилась");
+          console.log("Form sended!)");
         } else {
-          console.error("Помилка відправки форми:", response.statusText);
+          console.error("Form submit error:", response.statusText);
         }
         alert("Thanks. I`ll get in contact with you");
       } catch (error) {
-        console.error("Помилка відправки форми:", error.message);
+        console.error("Form submit error:", error.message);
       }
     } else {
       alert("Fill in required fields");
@@ -68,19 +69,18 @@ document.addEventListener("DOMContentLoaded", function () {
   function formValidate(form) {
     let error = 0;
     let formReq = form.getElementsByClassName("_req");
-    console.log("помилка в _req");
+    console.log("error at _req");
     console.log("formReq", formReq);
 
     for (let i = 0; i < formReq.length; i++) {
       const input = formReq[i];
       formRemoveError(input);
-      console.log("formReq[i]", formReq[i]);
 
       if (input.classList.contains("_email")) {
         if (emailTest(input)) {
           formAddError(input);
           error++;
-          console.log("помилка в пошті");
+          console.log("mail error");
           alert("Fill in the email correctly");
         }
       }
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (phoneTest(input)) {
           formAddError(input);
           error++;
-          console.log("помилка в телефоні");
+          console.log("phone error");
           alert("Fill in the phone number correctly");
         }
       }
@@ -96,9 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (input.value === "") {
         formAddError(input);
         error++;
-        console.log("помилка в пустому інпуті");
+        console.log("error, empty input");
       }
-      console.log("помилка валідації");
+      console.log("Validation error");
     }
     return error;
   }
@@ -122,8 +122,13 @@ document.addEventListener("DOMContentLoaded", function () {
       input.value
     );
   }
-});
+}
 
+// Natali
+// 0934789789
+// nata@gmail.com
+
+// другий варіант
 // function send(event, php) {
 //   console.log("Отправка запроса");
 //   event.preventDefault ? event.preventDefault() : (event.returnValue = false);
@@ -153,4 +158,32 @@ document.addEventListener("DOMContentLoaded", function () {
 //     alert("Ошибка отправки запроса");
 //   };
 //   req.send(new FormData(event.target));
+// }
+
+// третій варіант
+// async function formSend(event) {
+//   event.preventDefault();
+//   const form = event.target;
+//   const formAction = form.getAttribute("action")
+//     ? form.getAttribute("action").trim()
+//     : "#";
+//   const formMethod = form.getAttribute("method")
+//     ? form.getAttribute("action").trim()
+//     : "GET";
+//   const formData = new FormData(form);
+
+//   form.classList.add("form-sending");
+
+//   const response = await fetch(formAction, {
+//     method: formMethod,
+//     body: formData,
+//   });
+
+//   if (response.ok) {
+//     alert("form sent");
+//     form.classList.remove("form-sending");
+//     form.reset();
+//   } else {
+//     alert("form NOT sent");
+//   }
 // }
