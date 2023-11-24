@@ -40,7 +40,7 @@ function submit() {
     let error = formValidate(form);
 
     let formData = new FormData(form);
-    console.log("formData", formData);
+
     if (error === 0) {
       try {
         let response = await fetch("https://planvoyage.fr/sendMail.php", {
@@ -57,7 +57,7 @@ function submit() {
         } else {
           console.error("Form submit error:", response.statusText);
         }
-        alert("Thanks. I`ll get in contact with you");
+        alert("Thanks. I will reach out to you soon.");
       } catch (error) {
         console.error("Form submit error:", error.message);
       }
@@ -69,8 +69,6 @@ function submit() {
   function formValidate(form) {
     let error = 0;
     let formReq = form.getElementsByClassName("_req");
-    console.log("error at _req");
-    console.log("formReq", formReq);
 
     for (let i = 0; i < formReq.length; i++) {
       const input = formReq[i];
@@ -80,7 +78,6 @@ function submit() {
         if (emailTest(input)) {
           formAddError(input);
           error++;
-          console.log("mail error");
           alert("Fill in the email correctly");
         }
       }
@@ -88,7 +85,6 @@ function submit() {
         if (phoneTest(input)) {
           formAddError(input);
           error++;
-          console.log("phone error");
           alert("Fill in the phone number correctly");
         }
       }
@@ -96,9 +92,7 @@ function submit() {
       if (input.value === "") {
         formAddError(input);
         error++;
-        console.log("error, empty input");
       }
-      console.log("Validation error");
     }
     return error;
   }
