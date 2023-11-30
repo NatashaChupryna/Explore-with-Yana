@@ -1,10 +1,5 @@
 "use strict";
-import notie from "notie";
 
-function hello() {
-  return notie.alert({ text: "Info!" });
-}
-hello();
 function banner() {
   const overlay = document.getElementById("overlay");
   const hasVisited = localStorage.getItem("hasVisited");
@@ -63,7 +58,6 @@ function submit() {
           console.error("Form submit error:", response.statusText);
         }
         alert("Thanks. I will reach out to you soon.");
-        // notie.alert({ text: "Info!" });
       } catch (error) {
         console.error("Form submit error:", error.message);
       }
@@ -92,7 +86,6 @@ function submit() {
           formAddError(input);
           error++;
           alert("Fill in the phone number correctly");
-          notie.alert({ text: "Info!" });
         }
       }
 
