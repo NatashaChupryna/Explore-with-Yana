@@ -644,6 +644,11 @@ header {
   gap: 24px;
   list-style: none;
 }
+@media screen and (min-width: 300px) and (max-width: 767px) {
+  .travel-pic {
+    display: none;
+  }
+}
 
 .picture {
   width: 280px;
@@ -1314,4 +1319,24 @@ header {
   .notification {
     font-size: 16px;
   }
+}
+
+.swiper {
+  width: 100%;
+  height: 475px;
+}
+@media screen and (min-width: 768px) {
+  .swiper {
+    width: 1px;
+    height: 1px;
+  }
+}
+
+.swiper {
+  padding: 0 15px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #689c45;
 }/*# sourceMappingURL=main.css.map */
